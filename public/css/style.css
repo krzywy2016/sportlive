@@ -1,0 +1,56 @@
+.nopadding {
+	padding: 0;
+}
+
+/* TOP MENU */
+.topmenu {
+	background-color: #3f8e06;
+	padding: 1% 0 1% 0;
+}
+.topmenubox {
+	padding-right: 1.9%;
+	float: left;
+}
+.topmenutext {
+	color: white;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+.topmenutext a {
+	color: white;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+.topmenutext a:hover {
+	color: #9b9b9b;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none; 
+}
+
+/* TOP BACKGROUND */
+.topbackground {
+	height: 100px;
+}
+
+.relation {
+	background-color: yellow;
+	padding: 0;
+
+}
+
+.promotion {
+	background-color: green;
+}
+
+/* FOOTER */
+.footer {
+	background-color: #62b724;
+}
+.datefooter {
+	background-color: #3f8e06;
+	text-align: center;
+	padding: 1% 0 1% 0;
+	color: white;
+	font-weight: bold;
+}
