@@ -27,10 +27,10 @@
 				</div>
 			</div>
 			<!-- top background image -->
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 topbackground">
-						tlo top menu
+						<img src="images/logo.jpg" />
 					</div>
 				</div>
 			</div>
@@ -51,13 +51,23 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-5">
-								zespół gospodarzy
+								<div class="col-lg-3">
+									<img src="images/teamlogo.png" height="40px"/>
+								</div>
+								<div class="col-lg-3">
+									zespół gospodarzy
+								</div>
 							</div>
 							<div class="col-lg-2">
 								wynik
 							</div>
 							<div class="col-lg-5">
-								zespół gości
+								<div class="col-lg-3">
+									zespół gości
+								</div>
+								<div class="col-lg-3">
+									<img src="images/teamlogo.png" height="40px"/>
+								</div>
 							</div>
 						</div>
 						<div class="row">
@@ -72,26 +82,29 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-12">
-								rekordy z wydarzeniami i zdjęciami z boiska
+								<ul class="nav nav-tabs" role="tablist">
+									<li class="active"><a href="#1zakladka" role="tab" data-toggle="tab">Relacja</a></li>
+									<li><a href="#2zakladka" role="tab" data-toggle="tab">Składy</a></li>
+									<li><a href="#3zakladka" role="tab" data-toggle="tab">Zmiany</a></li>
+									<li><a href="#4zakladka" role="tab" data-toggle="tab">Kartki</a></li>
+									<li><a href="#5zakladka" role="tab" data-toggle="tab">Zdjęcia</a></li>
+								</ul>
+
+								<!-- Zawartość zakładek -->
+								<div class="tab-content">
+									<div class="tab-pane active" id="1zakladka">Zawartość pierwszej zakładki</div>
+									<div class="tab-pane" id="2zakladka">Zawartość drugiej zakładki</div>
+									<div class="tab-pane" id="3zakladka">Zawartość trzeciej zakładki</div>
+									<div class="tab-pane" id="4zakladka">Zawartość czwartej zakładki</div>
+									<div class="tab-pane" id="5zakladka">Zawartość czwartej zakładki</div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-4 promotion">
 						<div class="row">
 							<div class="col-lg-12">
-								fejsbuczek
-							</div>
-							<div class="col-lg-12">
-								Skład drużyny gospodarzy
-							</div>
-							<div class="col-lg-12">
-								Skład drużyny gości
-							</div>
-							<div class="col-lg-12">
-								Zmiany
-							</div>
-							<div class="col-lg-12">
-								kartki
+								<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fsportlive.pl&layout=button_count&size=large&width=83&height=28&appId" width="183" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 							</div>
 							<div class="col-lg-12">
 								Czat
@@ -111,7 +124,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12 datefooter">
-						AISEN SportLive 1.0
+						&copy; 2019 AISEN SportLive
 					</div>
 				</div>
 			</div>

@@ -31,16 +31,17 @@
 /* TOP BACKGROUND */
 .topbackground {
 	height: 100px;
+	padding: 1% 0 0 0;
 }
 
+/* RELATION */
 .relation {
-	background-color: yellow;
 	padding: 0;
 
 }
 
 .promotion {
-	background-color: green;
+	
 }
 
 /* FOOTER */
@@ -53,4 +54,5 @@
 	padding: 1% 0 1% 0;
 	color: white;
 	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
 }
