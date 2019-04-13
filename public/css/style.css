@@ -37,7 +37,48 @@
 /* RELATION */
 .relation {
 	padding: 0;
-
+}
+.nameteam {
+	text-align: center;
+    height: 60px;
+    line-height: 60px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
+.questteam {
+	text-align: right;
+}
+.result {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	text-align: center;
+	background-color: #3f8e06;
+	height: 60px;
+	line-height: 60px;
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+}
+.time {
+	text-align: center;
+	background-color: red;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-color: #62b724;
+	color: white;
+}
+.descriptionevent {
+	text-align: center;
+	margin: 3% 0 0 0;
+	padding: 1% 0 1% 0;
+	background-color: #62b724;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	color: white;
+}
+.relationwindow {
+	margin-bottom: 3%;
 }
 
 .promotion {
@@ -53,6 +94,5 @@
 	text-align: center;
 	padding: 1% 0 1% 0;
 	color: white;
-	font-weight: bold;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }

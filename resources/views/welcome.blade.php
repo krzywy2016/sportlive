@@ -9,6 +9,7 @@
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 			<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+			<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 			<link href="{{ asset('css/style.css') }}" rel="stylesheet" />
@@ -37,13 +38,13 @@
 			<!-- content -->
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8 relation">
+					<div class="col-lg-7 relation">
 						<div class="row">
 							<div class="col-lg-5">
 						
 							</div>
-							<div class="col-lg-2">
-								czas
+							<div class="col-lg-2 time">
+								przed meczem
 							</div>
 							<div class="col-lg-5">
 						
@@ -52,36 +53,36 @@
 						<div class="row">
 							<div class="col-lg-5">
 								<div class="col-lg-3">
-									<img src="images/teamlogo.png" height="40px"/>
+									<img src="images/teamlogo.png" height="60px"/>
 								</div>
-								<div class="col-lg-3">
-									zespół gospodarzy
+								<div class="col-lg-9  nameteam">
+									Stal Rzeszów
 								</div>
 							</div>
-							<div class="col-lg-2">
-								wynik
+							<div class="col-lg-2 result">
+								0 : 0
 							</div>
-							<div class="col-lg-5">
-								<div class="col-lg-3">
-									zespół gości
+							<div class="col-lg-5 questteam">
+								<div class="col-lg-9 nameteam">
+									Resovia Rzeszów
 								</div>
 								<div class="col-lg-3">
-									<img src="images/teamlogo.png" height="40px"/>
+									<img src="images/teamlogo.png" height="60px"/>
 								</div>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12">
-								dane wydarzenia jak data, godzina, miejsce, liga
+							<div class="col-lg-12 descriptionevent">
+								13.04.2019 (sobota), 18:00 • Stadion Miejski, Rzeszów • II Liga • 30. kolejka
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-lg-12">
-								reklama
+								<br />reklama<br /><br />
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12">
+							<div class="col-lg-12 relationwindow">
 								<ul class="nav nav-tabs" role="tablist">
 									<li class="active"><a href="#1zakladka" role="tab" data-toggle="tab">Relacja</a></li>
 									<li><a href="#2zakladka" role="tab" data-toggle="tab">Składy</a></li>
@@ -101,6 +102,8 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-lg-1">
+					</div>
 					<div class="col-lg-4 promotion">
 						<div class="row">
 							<div class="col-lg-12">
@@ -114,10 +117,12 @@
 				</div>
 			</div>
 			<!-- footer -->
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12 footer">
-						tlo top menu
+			<div class="container-fluid footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							tlo top menu
+						</div>
 					</div>
 				</div>
 			</div>
