@@ -3,4 +3,19 @@ body {
 }
 .loginpanel {
 	background-color: #3f8e06;
+	text-align: center;
+	margin: 15% 0;
+}
+.loginlogo {
+	height: 140px;
+	padding: 5% 0;
+}
+.paneltext {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+}
+
+.red {
+	background-color: red;
 }
