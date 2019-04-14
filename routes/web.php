@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('adminlogin', function () {
     return view('adminlogin');
 });
+
+Route::get('adminpanel', function () {
+    return view('adminindex');
+});
+
+

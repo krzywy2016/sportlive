@@ -15,7 +15,7 @@
 			<link href="{{ asset('css/admin.css') }}" rel="stylesheet" />
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	</head>
-	<body>
+	<body class="bodylogin">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4"></div>
