@@ -37,6 +37,15 @@
 	line-height: 160px;
 }
 
+.contentbox {
+	background-color: white;
+	padding: 1%;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
 /* OTHER */
 .red {
 	background-color: red;
@@ -173,3 +182,30 @@ div.polaroid {
 
 .btn-default.btn-on-4.active{background-color: #006FFC;color: #5BB75B;}
 .btn-default.btn-off-4.active{background-color: #DA4F49;color: #DA4F49;}
+
+
+/* WSTAWKI Z PODPOWIEDZIAMI DLA USERA */
+.how-section1{
+    margin-top:-15%;
+    padding: 10%;
+}
+.how-section1 h4{
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
+.how-section1 .subheading{
+    color: #3931af;
+    font-size: 20px;
+}
+.how-section1 .row
+{
+    margin-top: 10%;
+}
+.how-img 
+{
+    text-align: left;
+}
+.how-img img{
+    width: 40%;
+}

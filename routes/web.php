@@ -23,4 +23,7 @@ Route::get('adminpanel', function () {
     return view('adminindex');
 });
 
+Route::get('addrelation', function () {
+    return view('adminaddrelation');
+});
 

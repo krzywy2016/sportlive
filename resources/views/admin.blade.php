@@ -22,7 +22,11 @@
 						<div class="col-lg-10 topprawy">
 								<div class="col-lg-3"></div>
 								<div class="col-lg-4"></div>
-								<div class="col-lg-5"><img src="images/user.png" class="image-circle"/>  Kamil Krzywonos</div>
+								<div class="col-lg-5">
+									<img src="images/message.png" height="30px"/>
+									<img src="images/alert.png" height="30px"/>
+									<img src="images/user.png" class="image-circle"/>  Kamil Krzywonos
+								</div>
 						</div>
 				</div>
 				<div class="row">
