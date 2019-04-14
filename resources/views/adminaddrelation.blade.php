@@ -97,7 +97,8 @@
 								<div class="col-lg-12">
 									<div class="col-lg-12">
 										<h4>Krok drugi</h4>
-										<p class="text-muted">Teraz już pozostaje dodać składy drużyn, sędziów i można zaczynać relację!</p>
+										<p class="text-muted">Teraz już pozostaje czekać na czas przedmeczowy i uzupełnić składy obu zespołów.<br />
+										Potem można zacząć relację i kibicować najleszym! Pamiętaj aby zapisać ustawienia relacji.<br /><br /></p>
 									</div>
 								</div>
 							</div>

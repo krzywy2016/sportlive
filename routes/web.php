@@ -27,3 +27,7 @@ Route::get('addrelation', function () {
     return view('adminaddrelation');
 });
 
+Route::get('myrelation', function () {
+    return view('adminmyrelation');
+});
+
