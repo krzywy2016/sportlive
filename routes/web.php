@@ -31,3 +31,11 @@ Route::get('myrelation', function () {
     return view('adminmyrelation');
 });
 
+Route::get('archiverelation', function () {
+    return view('adminarchiverelation');
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

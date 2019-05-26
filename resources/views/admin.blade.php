@@ -35,22 +35,22 @@
 							<div class="profile-usermenu">
 							<ul class="nav">
 								<li class="active">
-									<a href="#">
+									<a href="{{ asset('/adminpanel') }}">
 									<img src="images/homepage.png" height="20px">
 									Dashboard </a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="{{ asset('/addrelation') }}">
 									<img src="images/add.png" height="20px">
 									Utwórz nową relację </a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="{{ asset('/myrelation') }}">
 									<img src="images/relation.png" height="20px">
 									Moje relacje LIVE </a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="{{ asset('/archiverelation') }}">
 									<img src="images/archive.png" height="20px">
 									Archiwalne relacje </a>
 								</li>
