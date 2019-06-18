@@ -18,14 +18,14 @@
 	<body class="body">
 		<div class="container-fluid">
 				<div class="row">
-						<div class="col-lg-2 toplewy"><img src="images/logocms.png" height="20px" align="middle"/> AISEN SportLIVE</div>
+						<div class="col-lg-2 toplewy"><img src="{{ asset('images/logocms.png') }}" height="20px" align="middle"/> AISEN SportLIVE</div>
 						<div class="col-lg-10 topprawy">
 								<div class="col-lg-3"></div>
 								<div class="col-lg-4"></div>
 								<div class="col-lg-5">
-									<img src="images/message.png" height="30px"/>
-									<img src="images/alert.png" height="30px"/>
-									<img src="images/user.png" class="image-circle"/>  Kamil Krzywonos
+									<img src="{{ asset('images/message.png') }}" height="30px"/>
+									<img src="{{ asset('images/alert.png') }}" height="30px"/>
+									<img src="{{ asset('images/user.png') }}" class="image-circle"/> @if(isset(Auth::user()->name)) {{Auth::user()->name}} @endif
 								</div>
 						</div>
 				</div>
@@ -35,43 +35,53 @@
 							<div class="profile-usermenu">
 							<ul class="nav">
 								<li class="active">
-									<a href="{{ asset('/adminpanel') }}">
-									<img src="images/homepage.png" height="20px">
+									<a href="{{ asset('/dashboard') }}">
+									<img src="{{ asset('images/homepage.png') }}" height="20px">
 									Dashboard </a>
 								</li>
 								<li>
 									<a href="{{ asset('/addrelation') }}">
-									<img src="images/add.png" height="20px">
+									<img src="{{ asset('images/add.png') }}" height="20px">
 									Utwórz nową relację </a>
 								</li>
 								<li>
 									<a href="{{ asset('/myrelation') }}">
-									<img src="images/relation.png" height="20px">
+									<img src="{{ asset('images/relation.png') }}" height="20px">
 									Moje relacje LIVE </a>
 								</li>
 								<li>
 									<a href="{{ asset('/archiverelation') }}">
-									<img src="images/archive.png" height="20px">
+									<img src="{{ asset('images/archive.png') }}" height="20px">
 									Archiwalne relacje </a>
 								</li>
+								@can('admin-only', Auth::user())<li>
+									<a href="{{ route('users.show')}}">
+									<img src="{{ asset('images/team.png') }}" height="20px">
+									Użytkownicy </a>
+								</li>@endcan
+								@can('admin-only', Auth::user())<li>
+									<a href="{{ route('users.show')}}">
+									<img src="{{ asset('images/team.png') }}" height="20px">
+									Drużyny </a>
+								</li>@endcan
 								<li>
 									<a href="#">
-									<img src="images/profile.png" height="20px">
+									<img src="{{ asset('images/profile.png') }}" height="20px">
 									Mój profil </a>
 								</li>
 								<li>
 									<a href="#">
-									<img src="images/manual.png" height="20px">
+									<img src="{{ asset('images/manual.png') }}" height="20px">
 									Samouczek </a>
 								</li>
 								<li>
 									<a href="#">
-									<img src="images/settings.png" height="20px">
+									<img src="{{ asset('images/settings.png') }}" height="20px">
 									Ustawienia </a>
 								</li>
 								<li>
-									<a href="#">
-									<img src="images/logout.png" height="20px">
+									<a href="{{asset('logout') }}">
+									<img src="{{ asset('images/logout.png') }}" height="20px">
 									Wyloguj </a>
 								</li>
 							</ul>

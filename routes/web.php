@@ -15,23 +15,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('adminlogin', function () {
-    return view('adminlogin');
-});
-
-Route::get('adminpanel', function () {
-    return view('adminindex');
-});
+/* ----- SYSTEM LOGOWANIA I WYLOGOWYWANIA UŻYTKOWNIKÓW ----- */
+Route::auth();
+Route::get('/dashboard', 'HomeController@index')->middleware('checkAction');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+/* ----- KONIEC SYSTEMU LOGOWANIA I WYLOGOWYWANIA UŻYTKOWNIKÓW ----- */
 
 Route::get('addrelation', function () {
     return view('adminaddrelation');
-});
+})->middleware('checkAction');
 
 Route::get('myrelation', function () {
     return view('adminmyrelation');
-});
+})->middleware('checkAction');
 
 Route::get('archiverelation', function () {
     return view('adminarchiverelation');
-});
+})->middleware('checkAction');
+
+/* ----- ZARZĄDZANIE UŻYTKOWNIKAMI ----- */
+Route::get('users/show', 'UserController@index')->name('users.show')->middleware('checkAction'); //widok tylka dla admina
+/* ----- KONIEC ZARZĄDZANIA UŻYTKOWNIKAMI ----- */
+
+Route::get('relation/add', 'RelationsController@store')->name('relation.store')->middleware('checkAction'); //widok tylka dla admina
 

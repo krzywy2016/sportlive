@@ -26,6 +26,7 @@
 								<h4>Krok pierwszy</h4>
 								<p class="text-muted">Podaj podstawowe informacje o meczu</p>
 							</div>
+							<form action="{{ URL::to('/relation/add') }}" enctype="multipart/form-data" method="post">
 							<div class="row">
 								<div class="col-lg-2"></div>
 								<div class="col-lg-4">
@@ -116,6 +117,7 @@
 									<button type="button" class="btn btn-danger">Zapisz nową relację!</button>
 								</div>
 							</div>
+							</form>
 							<div class="row">
 								<div class="col-lg-12">
 									<br /><br />

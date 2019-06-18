@@ -20,6 +20,8 @@
 			<div class="row">
 				<div class="col-lg-4"></div>
 				<div class="col-lg-4 loginpanel">
+				<form action="{{ URL::to('/admindologin') }}" enctype="multipart/form-data" method="post">
+				{{ csrf_field() }}
 					<div class="row">
 						<img src="images/user.png" class="loginlogo" /><br />
 						<span class="paneltext">Panel logowania</span>
@@ -27,20 +29,21 @@
 					<div class="row">
 						<div class="col-lg-12">
 							Nazwa użytkownika<br />
-							<input></input>
+							<input type="text" class="form-control" name="email"></input>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-12">
 							Hasło<br />
-							<input></input>
+							<input type="password" class="form-control" name="password"></input>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-12">
-							<button>Zaloguj</button>
+							<button type="submit">Zaloguj</button>
 						</div>
 					</div>
+				</form>
 				</div>
 				<div class="col-lg-4"></div>
 			</div>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Relations;
+use App\Post;
 use Illuminate\Http\Request;
 
-class RelationsController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,19 +35,16 @@ class RelationsController extends Controller
      */
     public function store(Request $request)
     {
-        $relations = new Relations;
-		$relations->title_advertisements = $request->title;
-		
-		$relations->save();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Relations  $relations
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Relations $relations)
+    public function show(Post $post)
     {
         //
     }
@@ -55,10 +52,10 @@ class RelationsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Relations  $relations
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Relations $relations)
+    public function edit(Post $post)
     {
         //
     }
@@ -67,10 +64,10 @@ class RelationsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Relations  $relations
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Relations $relations)
+    public function update(Request $request, Post $post)
     {
         //
     }
@@ -78,10 +75,10 @@ class RelationsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Relations  $relations
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Relations $relations)
+    public function destroy(Post $post)
     {
         //
     }
