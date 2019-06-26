@@ -15,15 +15,17 @@ class CreateRelationsTable extends Migration
     {
         Schema::create('relations', function (Blueprint $table) {
             $table->increments('id');
-			$table->integer('user_id');
-			$table->integer('idteamhome');
-			$table->integer('idteamaway');
-			$table->integer('resulthometeam');
-			$table->integer('resultawayteam');
-			$table->date('matchdate');
-			$table->string('matchplace');
-			$table->integer('league');
-			$table->integer('round');
+			$table->integer('user_id')->nullable();
+			$table->string('teamhome')->nullable();
+			$table->string('teamaway')->nullable();
+			$table->integer('resulthometeam')->nullable();
+			$table->integer('resultawayteam')->nullable();
+			$table->date('matchdate')->nullable();
+			$table->string('hour')->nullable();
+			$table->string('matchplace')->nullable();
+			$table->string('league')->nullable();
+			$table->integer('round')->nullable();
+			$table->integer('status')->nullable();
             $table->timestamps();
         });
     }

@@ -31,7 +31,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 topbackground">
-						<img src="images/logo.jpg" />
+						<img src="{{asset('images/logo.jpg')}}" />
 					</div>
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 									<img src="images/teamlogo.png" height="60px"/>
 								</div>
 								<div class="col-lg-9  nameteam">
-									Stal Rzeszów
+									{{$relationview->teamhome}}
 								</div>
 							</div>
 							<div class="col-lg-2 result">
@@ -64,7 +64,7 @@
 							</div>
 							<div class="col-lg-5 questteam">
 								<div class="col-lg-9 nameteam">
-									Resovia Rzeszów
+									{{$relationview->teamaway}}
 								</div>
 								<div class="col-lg-3">
 									<img src="images/teamlogo.png" height="60px"/>
@@ -73,7 +73,7 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-12 descriptionevent">
-								13.04.2019 (sobota), 18:00 • Stadion Miejski, Rzeszów • II Liga • 30. kolejka
+								{{date('d.m.Y', strtotime($relationview->matchdate))}}, {{$relationview->hour}} • {{$relationview->matchplace}} • {{$relationview->league}} • {{$relationview->round}}. kolejka
 							</div>
 						</div>
 						<div class="row">
@@ -93,7 +93,25 @@
 
 								<!-- Zawartość zakładek -->
 								<div class="tab-content">
-									<div class="tab-pane active" id="1zakladka">Zawartość pierwszej zakładki</div>
+									<div class="tab-pane active" id="1zakladka">
+											<script type="text/javascript">
+
+												var timeout = setInterval(reloadChat, 30000);   
+												var timeout = setTimeout(reload, 100); 
+												function reload () {
+													$('#links').load('http://sportscore.eu/posts.php', {id:"<?php echo $relationview->id;?>"});
+												}
+												function reloadChat () {
+													$('#links').load('http://sportscore.eu/posts.php', {id:"<?php echo $relationview->id;?>"});
+												}
+											</script>
+										<div class="row">
+											<br />
+										</div>
+										<div class="row">
+											<div id="links"></div>
+										</div>
+									</div>
 									<div class="tab-pane" id="2zakladka">Zawartość drugiej zakładki</div>
 									<div class="tab-pane" id="3zakladka">Zawartość trzeciej zakładki</div>
 									<div class="tab-pane" id="4zakladka">Zawartość czwartej zakładki</div>

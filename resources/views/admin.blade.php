@@ -13,6 +13,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 			<link href="{{ asset('css/admin.css') }}" rel="stylesheet" />
+			<link href="{{ asset('css/style.css') }}" rel="stylesheet" />
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	</head>
 	<body class="body">
@@ -57,12 +58,12 @@
 								@can('admin-only', Auth::user())<li>
 									<a href="{{ route('users.show')}}">
 									<img src="{{ asset('images/team.png') }}" height="20px">
-									Użytkownicy </a>
+									<span style="color: #e9fa77;">Użytkownicy</span> </a>
 								</li>@endcan
 								@can('admin-only', Auth::user())<li>
-									<a href="{{ route('users.show')}}">
-									<img src="{{ asset('images/team.png') }}" height="20px">
-									Drużyny </a>
+									<a href="{{ route('team.show')}}">
+									<img src="{{ asset('images/teamwork.png') }}" height="20px">
+									<span style="color: #e9fa77;">Zespoły</span></a>
 								</li>@endcan
 								<li>
 									<a href="#">
