@@ -19,7 +19,7 @@
 						
 									</div>
 									<div class="col-lg-2 time">
-											przed meczem
+											{{$relations->status}}
 									</div>
 									<div class="col-lg-5">
 						
@@ -55,8 +55,22 @@
 									<div class="col-lg-12">
 										<br />
 									</div>
+									<div class="col-lg-6">
+										<button type="button" class="btn btn-block btn" style="font-size:17px;">Odejmij gola </button>	
+									</div>
+									<div class="col-lg-6">
+										<button type="button" class="btn btn-block btn" style="font-size:17px;">Odejmij gola</button>	
+									</div>
+								</div>	
+								<div class="row">
+									<div class="col-lg-12">
+										<br />
+									</div>
 									<div class="col-lg-7">
-										 <select class="form-control" id="exampleFormControlSelect1">
+									<form action="{{ URL::to('/relation/editstatus') }}" enctype="multipart/form-data" method="post">
+									@csrf
+										 <input type="hidden" name="id" value="{{$relations->id}}">
+										 <select class="form-control" id="exampleFormControlSelect1" name="status">
 												<option>przed meczem</option>
 												<option>trwa I połowa</option>
 												<option>przerwa</option>
@@ -68,8 +82,9 @@
 										</select>	
 									</div>
 									<div class="col-lg-5">
-										<button type="button" class="btn btn-block btn-primary">ZMIEŃ</button>
+										<button type="submit" class="btn btn-block btn-primary">ZMIEŃ</button>
 									</div>
+									</form>
 								</div>		
 								<div class="row">
 									<div class="col-lg-12">
@@ -160,14 +175,14 @@
 									<div class='col-lg-1'>
 											<img src="{{asset('images/chat.png')}}" height="15px" />
 									</div>
-									<div class='col-lg-8'>
+									<div class='col-lg-6'>
 											<span style='font-size: 13px; color: #808080;'>{{$posts->text}}</span>
 									</div>
-									<div class='col-lg-1'>
+									<div class='col-lg-2'>
 											<button type="button" class="btn btn-block btn-warning btn-xs">Edytuj</button>
 									</div>
-									<div class='col-lg-1'>
-											<button type="button" class="btn btn-block btn-dangerous btn-xs">Usuń</button>
+									<div class='col-lg-2'>
+											<button type="button" class="btn btn-block btn-danger btn-xs">Usuń</button>
 									</div>
 									<div class='col-lg-12'>
 											<hr>

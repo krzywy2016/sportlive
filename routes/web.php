@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'PageController@index')->name('index.show');
 
 Route::get('/relation/{id}/show', 'RelationsController@show')->name('relation.show');
 
@@ -41,6 +42,8 @@ Route::post('relation/add', 'RelationsController@store')->name('relation.store')
 Route::get('relation/edit/{id}/show', 'RelationsController@edit')->name('relation.edit')->middleware('checkAction'); //widok tylka dla admina
 
 Route::post('/relation/addpost','RelationsController@addpost');
+Route::post('/relation/editstatus','RelationsController@editstatus');
+Route::post('/relation/addchatpost','RelationsController@chatpost');
 
 
 Route::get('teams/show', 'TeamController@index')->name('team.show')->middleware('checkAction');

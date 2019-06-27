@@ -1,40 +1,6 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl-PL" lang="pl-PL" >
-	<head>
-            <title>Sport LIVE</title>
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<meta name="Description" content="" />
-			<meta name="Keywords" content="" />
-			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-			<meta name="Generator" content="Aisen CMS 1.0" />
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-			<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
-			<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-			<link href="{{ asset('css/style.css') }}" rel="stylesheet" />
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	</head>
-	<body>
-			<!-- top menu -->
-			<div class="container-fluid topmenu">
-				<div class="container nopadding">
-					<div class="col-lg-12 topmenutext">
-						<div class="topmenubox"><a href="#" >Strona główna</a></div>
-						<div class="topmenubox"><a href="#" >Dodaj relację</a></div>
-						<div class="topmenubox"><a href="#" >Regulamin</a></div>
-						<div class="topmenubox"><a href="#" >O nas</a></div>
-					</div>
-				</div>
-			</div>
-			<!-- top background image -->
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 topbackground">
-						<img src="{{asset('images/logo.jpg')}}" />
-					</div>
-				</div>
-			</div>
+@extends('page')
+
+@section('content')
 			<!-- content -->
 			<div class="container">
 				<div class="row">
@@ -44,7 +10,18 @@
 						
 							</div>
 							<div class="col-lg-2 time">
-								przed meczem
+								<script type="text/javascript">
+
+												var timeout = setInterval(reloadstatus, 40000);   
+												var timeout = setTimeout(reloadstatus1, 10); 
+												function reloadstatus1 () {
+													$('#status').load('http://sportscore.eu/status.php', {id:"<?php echo $relationview->id;?>"});
+												}
+												function reloadstatus () {
+													$('#status').load('http://sportscore.eu/status.php', {id:"<?php echo $relationview->id;?>"});
+												}
+								</script>
+								<div id="status"></div>
 							</div>
 							<div class="col-lg-5">
 						
@@ -109,7 +86,7 @@
 											<br />
 										</div>
 										<div class="row">
-											<div id="links"></div>
+											<div style="height: 650px; overflow: scroll;" id="links"></div>
 										</div>
 									</div>
 									<div class="tab-pane" id="2zakladka">Zawartość drugiej zakładki</div>
@@ -124,32 +101,49 @@
 					</div>
 					<div class="col-lg-4 promotion">
 						<div class="row">
-							<div class="col-lg-12">
+							<div class="col-lg-12 nopadding">
+									<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSportScoreeu-508568496350533&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+							</div>
+							<div class="col-lg-12 nopadding">
+								<br />
+							</div>
+							<div class="col-lg-12 nopadding">
 								<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fsportlive.pl&layout=button_count&size=large&width=83&height=28&appId" width="183" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 							</div>
-							<div class="col-lg-12">
+							<div class="col-lg-12 nopadding">
 								Czat
+								<script type="text/javascript">
+
+												var timeout = setInterval(reloadstatus, 5000);   
+												var timeout = setTimeout(reloadstatus1, 10); 
+												function reloadstatus1 () {
+													$('#chat').load('http://sportscore.eu/chat.php', {id:"<?php echo $relationview->id;?>"});
+												}
+												function reloadstatus () {
+													$('#chat').load('http://sportscore.eu/chat.php', {id:"<?php echo $relationview->id;?>"});
+												}
+								</script>
+								<div id="chat"></div>
 							</div>
+							<div class="col-lg-12 nopadding"><br /></div>
+							<form action="{{ URL::to('/relation/addchatpost') }}" enctype="multipart/form-data" method="post">
+								@csrf
+								<input type="hidden" name="id" value="{{$relationview->id}}">
+							<div class="col-lg-3 nopadding">
+								<input type="nick" name="nick" class="form-control input-sm" id="exampleFormControlInput1" @if( Session::has('user') )value="{{ Session::get('user') }}" @endif >
+							</div>
+							<div class="col-lg-1 nopadding">
+					
+							</div>
+							<div class="col-lg-5 nopadding">
+								<input type="text" name="chatpost" class="form-control input-sm" id="exampleFormControlInput1" >
+							</div>
+							<div class="col-lg-3">
+								<button type="submit" class="btn btn-block btn-primary"><span style="font-size: 11px;">WYŚLIJ</span></button>
+							</div>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- footer -->
-			<div class="container-fluid footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							tlo top menu
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12 datefooter">
-						&copy; 2019 AISEN SportLive
-					</div>
-				</div>
-			</div>
-	</body>
-</html>
+@endsection

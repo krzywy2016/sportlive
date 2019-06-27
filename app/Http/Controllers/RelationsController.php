@@ -8,6 +8,8 @@ use DB;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
 use App\Post;
+use App\ChatPost;
+use Session;
 
 class RelationsController extends Controller
 {
@@ -171,5 +173,27 @@ class RelationsController extends Controller
 		$posts->save();
 		
 		return redirect()->route('relation.edit', [$posts->relations_id]);		
+	}
+	
+	public function editstatus(Request $request)
+	{
+		$status = Relations::find($request->id);
+		$status->status = $request->status;
+		
+		$status->save();
+		
+		return redirect()->route('relation.edit', [$request->id]);		
+	}
+	public function chatpost(Request $request)
+	{
+		$posts = new ChatPost;
+		$posts->nick = $request->nick;
+		$posts->text = $request->chatpost;
+		$posts->relations_id = $request->id;
+		Session::flash('user', $request->nick);
+		
+		$posts->save();
+		
+		return redirect()->route('relation.show', [$request->id]);		
 	}
 }

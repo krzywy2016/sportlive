@@ -25,7 +25,7 @@ class CreateRelationsTable extends Migration
 			$table->string('matchplace')->nullable();
 			$table->string('league')->nullable();
 			$table->integer('round')->nullable();
-			$table->integer('status')->nullable();
+			$table->string('status')->nullable();
             $table->timestamps();
         });
     }
