@@ -12,7 +12,6 @@
 }
 
 while ($actor = $result->fetch_assoc()) {	
-	echo "
-      ".$actor['status']."";
+	echo $actor['status'];
 }
 ?>

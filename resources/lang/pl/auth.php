@@ -15,6 +15,10 @@ return [
 
     'failed' => 'Dane się nie zgadzają. Błędny login lub hasło.',
     'throttle' => 'Zbyt wiele prób logowania. Spróbuj ponownie za :seconds seconds.',
-	'login' => 'Zaloguj się',
+	'Login' => 'Zaloguj się',
+	'E-Mail Address' => 'Adres email:',
+	'Password' => 'Hasło:',
+	'Remember Me' => 'Zapamiętaj mnie',
+	'Forgot Your Password?' => 'Zapomniałem hasła',
 
 ];

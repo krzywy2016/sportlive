@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Team;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image as Image;
 
 class TeamController extends Controller
 {
@@ -36,7 +37,24 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+
+            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+        ]);
+		
+		$team = new Team;
+		$team->name = $request->name;
+		
+		$imageName = trim($request->name).'.jpg';
+
+        request()->logo->move(public_path('images/logo'), $imageName);
+		
+		$team->logoadress = 'images/logo/'.$imageName; 
+		
+		$team->save();
+		
+		return redirect()->back();
     }
 
     /**

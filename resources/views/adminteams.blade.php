@@ -2,6 +2,27 @@
 
 @section('content')
 @can('admin-only', Auth::user())
+<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-12 firsttiles">
+				<img src="{{ asset('images/add.png') }}" height="40px" /> <span style="font-weight: bold">TWORZENIE NOWEJ RELACJI</span>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-12 contentbox">
+				a
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-12">
+				<br />
+			</div>
+		</div>
+	</div>
 <div class="row">
 	<div class="col-lg-12">
 		<div class="col-lg-1"></div>
@@ -33,7 +54,7 @@
 									<tr>
 										<td>{{$team->id}}</td>
 										<td>{{$team->name}}</td>
-										<td></td>
+										<td><center><img src="../{{$team->logoadress}}" height="30px"/></center></td>
 										<td>{{$team->city}}</td>
 										<td>{{$team->stadium}}</td>
 										<td>{{$team->created_at}}</td>

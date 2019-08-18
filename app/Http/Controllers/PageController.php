@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Page;
+use App\User;
+use App\Relations;
+use App\ChatPost;
+use App\Post;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -14,7 +18,13 @@ class PageController extends Controller
      */
     public function index()
     {
-        return view('index');
+		$futurerelations = Relations::where('status','LIKE','przed meczem')->limit(5)->get();
+		$users = User::all()->count();
+		$relation = Relations::all()->count();
+		$chat = ChatPost::all()->count();
+		$post = Post::all()->count();
+		
+		return view('index', compact('futurerelations', 'users', 'relation', 'chat', 'post'));
     }
 
     /**
